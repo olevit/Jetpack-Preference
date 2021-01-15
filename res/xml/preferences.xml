@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory android:title="Simple Settings">
+        <Preference
+            android:icon="@drawable/ic_launcher_foreground"
+            android:key="preference_key"
+            android:title="Preference title"
+            app:singleLineTitle="true"
+            android:summary="Preference summary" />
+
+        <CheckBoxPreference
+            android:selectable="true"
+            android:key="checkbox"
+            android:summary="CheckBoxPreference summary"
+            android:title="CheckBoxPreference title" />
+
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="advanced"
+        android:title="Complex Settings"
+        app:initialExpandedChildrenCount="0">
+
+        <SwitchPreferenceCompat
+            android:key="switch"
+            android:summary="SwitchPreferenceCompat summary"
+            android:title="SwitchPreferenceCompat title" />
+
+        <DropDownPreference
+            android:entries="@array/items"
+            android:entryValues="@array/items"
+            android:key="dropdown"
+            android:title="DropDownPreference title"
+            app:useSimpleSummaryProvider="true" />
+
+        <SeekBarPreference
+            android:defaultValue="4"
+            android:key="seekbar"
+            android:max="10"
+            android:title="SeekBarPreference title" />
+
+        <EditTextPreference
+            android:dialogTitle="Enter name"
+            android:key="edittext"
+            android:title="EditTextPreference title"
+            app:useSimpleSummaryProvider="true" />
+
+        <ListPreference
+            android:entries="@array/items"
+            android:entryValues="@array/items"
+            android:key="list"
+            android:title="ListPreference title"
+            app:useSimpleSummaryProvider="true" />
+
+        <MultiSelectListPreference
+            android:entries="@array/items"
+            android:entryValues="@array/items"
+            android:key="multi_select_list"
+            android:summary="MultiSelectListPreference summary"
+            android:title="MultiSelectListPreference title" />
+    </PreferenceCategory>
+
+</androidx.preference.PreferenceScreen>
